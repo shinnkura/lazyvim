@@ -27,6 +27,7 @@ vim.api.nvim_set_keymap("i", "<C-n>", "<Down>", { noremap = true, silent = true 
 -- Ctrl+aで行頭、Ctrl+eで行末に移動
 vim.api.nvim_set_keymap("i", "<C-a>", "<Home>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-e>", "<End>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-d>", "<C-o>dl", { noremap = true, silent = true })
 
 -- カーソル移動の高速化
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
