@@ -34,6 +34,28 @@ vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true, silent = true })
 
+-- ノーマルモードでのカーソル移動
+vim.api.nvim_set_keymap("n", "<C-b>", "h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-f>", "l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-p>", "k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-n>", "j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-a>", "0", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-e>", "$", { noremap = true, silent = true })
+
+-- ビジュアルモードでのカーソル移動
+vim.api.nvim_set_keymap("v", "<C-b>", "h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-f>", "l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-p>", "k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-n>", "j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-a>", "0", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-e>", "$", { noremap = true, silent = true })
+
+-- コマンドモードでのカーソル移動
+vim.api.nvim_set_keymap("c", "<C-b>", "<Left>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<C-f>", "<Right>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<C-a>", "<Home>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<C-e>", "<End>", { noremap = true, silent = true })
+
 -- 括弧の自動補完
 vim.api.nvim_set_keymap("i", "(", "()<Left>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "{", "{}<Left>", { noremap = true, silent = true })
