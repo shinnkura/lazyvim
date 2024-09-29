@@ -28,6 +28,7 @@ vim.keymap.set("i", "<C-n>", "<Down>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-a>", "<Home>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-e>", "<End>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-d>", "<C-o>dl", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-k>", "<C-o>D", { noremap = true, silent = true })
 
 -- カーソル移動の高速化
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
