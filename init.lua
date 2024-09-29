@@ -1,6 +1,12 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("keymaps")
+
+-- キーマップの設定は遅延ロードに変更する
+vim.api.nvim_create_autocmd("VeryLazy", {
+  callback = function()
+    require("config.keymaps")
+  end,
+})
 
 -- リーダーキーの設定
 vim.g.mapleader = " "
