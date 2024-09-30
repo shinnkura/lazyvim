@@ -2,7 +2,8 @@
 require("config.lazy")
 
 -- キーマップの設定は遅延ロードに変更する
-vim.api.nvim_create_autocmd("VeryLazy", {
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
   callback = function()
     require("config.keymaps")
   end,
@@ -72,3 +73,20 @@ vim.o.smartcase = true
 vim.o.incsearch = true
 vim.o.wrapscan = true
 vim.o.hlsearch = true
+
+-- LSP設定
+require("lspconfig").intelephense.setup({
+  on_attach = function(client, bufnr)
+    -- キーマッピングの設定
+    local opts = { noremap = true, silent = true }
+    local keymap = vim.api.nvim_buf_set_keymap
+
+    -- 定義にジャンプ (関数の定義や宣言に移動)
+    keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+
+    -- 他の便利なLSPショートカット
+    keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+    keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+  end,
+})
