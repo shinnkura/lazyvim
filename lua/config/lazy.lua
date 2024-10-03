@@ -18,6 +18,8 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- GitHub themeを追加
+    { "projekt0n/github-nvim-theme" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -30,7 +32,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  -- GitHub themeをインストールするカラースキームに追加
+  install = { colorscheme = { "github_dark", "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
@@ -51,3 +54,6 @@ require("lazy").setup({
     },
   },
 })
+
+-- GitHubテーマを適用
+vim.cmd("colorscheme github_dark_default")  -- darkテーマの適用。別のスタイルを使用する場合は変更可能
