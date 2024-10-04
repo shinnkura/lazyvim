@@ -8,11 +8,10 @@ return {
       function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
       desc = "Find Plugin File",
     },
-    -- Telescopeの設定
-    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files", noremap = true, silent = true },
-    { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep", noremap = true, silent = true },
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers", noremap = true, silent = true },
-    { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find Help Tags", noremap = true, silent = true },
+    { "<leader>ff", "<cmd>Telescope find_files no_ignore=true hidden=true<CR>", desc = "Find Files" },
+    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
+    { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find Help Tags" },
   },
   -- change some options
   opts = {
@@ -21,6 +20,17 @@ return {
       layout_config = { prompt_position = "top" }, -- 検索バーを上部に表示
       sorting_strategy = "ascending", -- 検索結果を上から表示
       winblend = 0,
+      vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+        "--no-ignore", -- `.gitignore` を無視しない
+      },
+      file_ignore_patterns = {},
     },
   },
 }
