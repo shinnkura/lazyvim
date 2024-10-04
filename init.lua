@@ -20,7 +20,6 @@ require("lazy").setup({
   { "neoclide/coc.nvim", branch = "release" },
   { "vim-airline/vim-airline" },
   { "nvim-lua/plenary.nvim" },
-  { "nvim-telescope/telescope.nvim", tag = "0.1.8" },
   { "echasnovski/mini.nvim", version = "*" },
 })
 
