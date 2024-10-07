@@ -64,7 +64,7 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.list = true
-vim.o.listchars = "tab:▸\\-"
+-- vim.o.listchars = "tab:▸\\-"
 
 -- 検索設定
 vim.o.ignorecase = true

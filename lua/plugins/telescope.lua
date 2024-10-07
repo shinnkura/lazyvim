@@ -8,7 +8,13 @@ return {
       function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
       desc = "Find Plugin File",
     },
-    { "<leader>ff", "<cmd>Telescope find_files no_ignore=true hidden=true<CR>", desc = "Find Files" },
+    {
+      "<leader>ff",
+      function()
+        require("telescope.builtin").find_files({ no_ignore = true, hidden = true })
+      end,
+      desc = "Find Files",
+    },
     { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live Grep" },
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find Buffers" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find Help Tags" },
