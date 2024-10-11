@@ -89,3 +89,9 @@ require("lspconfig").intelephense.setup({
     keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   end,
 })
+
+-- ファイルの自動リロード
+vim.o.autoread = true
+vim.cmd([[
+    autocmd FocusGained,BufEnter * checktime
+]])

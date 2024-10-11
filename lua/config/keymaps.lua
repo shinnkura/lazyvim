@@ -64,3 +64,6 @@ vim.keymap.set("i", "{", "{}<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "[", "[]<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", '"', '""<Left>', { noremap = true, silent = true })
 vim.keymap.set("i", "'", "''<Left>", { noremap = true, silent = true })
+
+-- ファイルリロードのショートカット
+vim.keymap.set("n", "<leader>r", ":e!<CR>", { noremap = true, silent = true })
