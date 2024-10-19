@@ -8,21 +8,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = { "go" },
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = true,
-        },
-      })
-    end,
-  },
-  {
     "neovim/nvim-lspconfig",
     config = function()
       require("lspconfig").gopls.setup({
