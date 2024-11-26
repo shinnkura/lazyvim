@@ -22,13 +22,13 @@ vim.keymap.set("i", "<C-[>", "<C-[>:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "jj", "<Esc>:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true })
 
-map("n", "p", "p:w<CR>", opts)
-map("n", "P", "P:w<CR>", opts)
+vim.keymap.set("n", "p", "p:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "P", "P:w<CR>", { noremap = true, silent = true })
 
-map("n", "dd", "dd:w<CR>", opts)
-map("n", "D", "D:w<CR>", opts)
-map("n", "x", "x:w<CR>", opts)
-map("n", ".", ".:w<CR>", opts)
+vim.keymap.set("n", "dd", "dd:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "D", "D:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "x", "x:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", ".", ".:w<CR>", { noremap = true, silent = true })
 
 -- インサートモードでのカーソル移動の設定
 vim.keymap.set("i", "<C-b>", "<Left>", { noremap = true, silent = true })
