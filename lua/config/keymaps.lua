@@ -16,8 +16,19 @@ cmp.setup({
   },
 })
 
-vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+-- 自動保存
+vim.keymap.set("i", "<ESC>", "<ESC>:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-[>", "<C-[>:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("i", "jj", "<Esc>:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true })
+
+map("n", "p", "p:w<CR>", opts)
+map("n", "P", "P:w<CR>", opts)
+
+map("n", "dd", "dd:w<CR>", opts)
+map("n", "D", "D:w<CR>", opts)
+map("n", "x", "x:w<CR>", opts)
+map("n", ".", ".:w<CR>", opts)
 
 -- インサートモードでのカーソル移動の設定
 vim.keymap.set("i", "<C-b>", "<Left>", { noremap = true, silent = true })
