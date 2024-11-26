@@ -55,5 +55,5 @@ require("lazy").setup({
   },
 })
 
--- GitHubテーマを適用
-vim.cmd("colorscheme github_dark_default") -- darkテーマの適用。別のスタイルを使用する場合は変更可能
+-- テーマを適用
+vim.cmd("colorscheme habamax")
