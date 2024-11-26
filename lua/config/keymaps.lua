@@ -29,6 +29,8 @@ vim.keymap.set("n", "dd", "dd:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "D", "D:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "x", "x:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", ".", ".:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "u", "u:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-r>", "<C-r>:w<CR>", { noremap = true, silent = true })
 
 -- インサートモードでのカーソル移動の設定
 vim.keymap.set("i", "<C-b>", "<Left>", { noremap = true, silent = true })
