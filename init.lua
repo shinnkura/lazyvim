@@ -23,6 +23,18 @@ require("lazy").setup({
   { "echasnovski/mini.nvim", version = "*" },
 })
 
+-- キーマップを遅延ロードに基づいて設定
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    -- 行の移動: Option + ↑ / Option + ↓
+    vim.api.nvim_set_keymap("n", "<A-Up>", ":m .-2<CR>==", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<A-Down>", ":m .+1<CR>==", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("v", "<A-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+  end,
+})
+
 -- カラー設定
 vim.o.termguicolors = true
 -- vim.cmd("colorscheme horizon")
