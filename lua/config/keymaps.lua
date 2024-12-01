@@ -20,17 +20,27 @@ cmp.setup({
 vim.keymap.set("i", "<ESC>", "<ESC>:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-[>", "<C-[>:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "jj", "<Esc>:w<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true })
 
+vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "p", "p:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "P", "P:w<CR>", { noremap = true, silent = true })
-
 vim.keymap.set("n", "dd", "dd:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "D", "D:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "x", "x:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", ".", ".:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "u", "u:w<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-r>", "<C-r>:w<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("v", "<ESC>", "<ESC>:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-[>", "<C-[>:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "p", "p:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "P", "P:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "dd", "dd:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "D", "D:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "x", "x:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", ".", ".:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "u", "u:w<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-r>", "<C-r>:w<CR>", { noremap = true, silent = true })
 
 -- インサートモードでのカーソル移動の設定
 vim.keymap.set("i", "<C-b>", "<Left>", { noremap = true, silent = true })
