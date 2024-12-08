@@ -58,8 +58,8 @@ require("lazy").setup({
 -- テーマを適用
 -- vim.cmd("colorscheme tokyonight-night")
 -- vim.cmd("colorscheme tokyonight-storm")
-vim.cmd("colorscheme habamax")
+-- vim.cmd("colorscheme habamax")
 -- vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme github_dark_default")
+vim.cmd("colorscheme github_dark_default")
 -- vim.cmd("colorscheme github_dark")
 -- vim.cmd("colorscheme ayu")
