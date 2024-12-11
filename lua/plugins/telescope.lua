@@ -35,6 +35,12 @@ return {
         "--column",
         "--smart-case",
         "--no-ignore", -- `.gitignore` を無視しない
+        "--glob=!node_modules/*", -- `node_modules` を除外
+        "--glob=!.next/*", -- Next.jsのビルド結果を除外
+        "--glob=!dist/*", -- カスタムビルドフォルダを除外
+        "--glob=!*.log", -- ログファイルを除外
+        "--glob=!vendor/*", -- Laravelの `vendor` を除外
+        "--glob=!storage/framework/*", -- Laravelキャッシュを除外
       },
       file_ignore_patterns = {},
     },
